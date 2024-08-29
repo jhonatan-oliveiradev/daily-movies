@@ -1,3 +1,29 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": "next/core-web-vitals",
+	"import-helpers/order-imports": [
+		"warn",
+		{
+			"newlinesBetween": "always",
+			"groups": [
+				["/^react/", "/^next/", "/^@next/"],
+				"/next/font/google/",
+				"/types/",
+				"/components/",
+				"/services/",
+				"/utils/",
+				"/lib/",
+				"/hooks/",
+				"/redux/",
+				"/^module/",
+				"/^@shared/",
+				"/absolute/",
+				["parent", "sibling", "index"],
+				"/styles/"
+			],
+			"alphabetize": {
+				"order": "asc",
+				"ignoreCase": true
+			}
+		}
+	]
 }
